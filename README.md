@@ -17,9 +17,13 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+-equals(je teste avec chaque if)
 
 ### Classe Markov
 #### function
+
+-readFile je fais 4 tests
+-randomElement 1 test
 
 ## Tricks & tips
 
