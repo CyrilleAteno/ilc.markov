@@ -17,9 +17,17 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+        equals
+#### functions ignore (reason)
+        hashCode (unused)
+        hashCodeEclipse (unused)
 
 ### Classe Markov
 #### function
+        randomElement (collection)
+        randomElement (list)
+        readFile
+        generateText (unfinished...)
 
 ## Tricks & tips
 

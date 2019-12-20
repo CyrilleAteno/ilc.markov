@@ -1,15 +1,23 @@
 package cfranc.com;
 
+/**
+ * This class associate two word
+ * 
+ */
+
 public class Couple {
 	
+        // Attribute
 	private String first;
 	private String second;
 	
+        // Constructor
 	public Couple(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
 	}
 	
+        // Setter & Getter
 	public String getFirst() {
 		return first;
 	}
@@ -25,13 +33,16 @@ public class Couple {
 	public void setSecond(String second) {
 		this.second = second;
 	}
-
+        
+        // overload of hashCode
 	@Override
 	public int hashCode() {
 		//return hashCodeEclipse();
 		return this.first.hashCode() + this.second.hashCode();
+                // recusivly hash both of our attribut
 	}
-
+        
+        // return prime * result + 0 if attribut exist or hash it not
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
@@ -40,6 +51,7 @@ public class Couple {
 		return result;
 	}
 	
+        // overload of equals operator
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
