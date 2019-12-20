@@ -51,7 +51,7 @@ public class Markov {
 	}
         
         /**
-         * read a file choose by his path
+         * read a file choose by his path and "learn" the word who are inside that file
          * @param path of the file we want to read
          */
 	public void readFile(String path) {
@@ -95,7 +95,7 @@ public class Markov {
          */
 	public String generateText(Couple p, int words) {
             String res = p.getFirst() + " " + p.getSecond() + " ";
-	    words -= 2;
+	    words -= 2; // soustract two because in the String res you added the two words of the couple param p
 	    while (words-- > 0) {
                 List<String> l = this.couples.get(p);
                 if (l == null) {
