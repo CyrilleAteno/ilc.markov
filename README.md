@@ -17,9 +17,12 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+-equals()
 
 ### Classe Markov
 #### function
+-readFile()
+-generateText()
 
 ## Tricks & tips
 
