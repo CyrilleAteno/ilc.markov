@@ -25,7 +25,7 @@ Hereafter, for each classes give function to be tested
 ### Classe Markov 
 #### functions
 - Test de la construction de Markov
-- Test de la lecture de fichier     (Non terminés)
+- Test de la lecture de fichier     
 - Tests de la génération (pour un retour valide et nul) d'un texte à partir d'un couple. (Non terminés)
 
 ## Tricks & tips

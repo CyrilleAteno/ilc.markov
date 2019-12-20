@@ -21,6 +21,7 @@ public class MarkovTest {
 		Markov m = new Markov();
                 assertNotNull(m);
 	}
+        // ----- Fonction readFile -----
         
         @Test
 	public void readFile_FileNotNull_couplesNotEmpty() {
@@ -29,6 +30,40 @@ public class MarkovTest {
 		
                 assertNotEquals(0, m.couples.size());
 	}
+        
+        @Test
+        public void readFile_test1_couples0() {
+		Markov m = new Markov();
+		m.readFile("test1.txt");
+		
+                assertEquals(0, m.couples.size());
+	}
+        
+        @Test
+        public void readFile_test2_couples0() {
+		Markov m = new Markov();
+		m.readFile("test2.txt");
+		
+                assertEquals(0, m.couples.size());
+	}
+        
+        @Test
+        public void readFile_test3_couples1() {
+		Markov m = new Markov();
+		m.readFile("test3.txt");
+		
+                assertEquals(1, m.couples.size());
+	}
+        
+        @Test
+        public void readFile_test4_couples2() {
+		Markov m = new Markov();
+		m.readFile("test4.txt");
+		
+                assertEquals(2, m.couples.size());
+	}
+        
+        
         
         
         // ----- Fonction generateText -----
