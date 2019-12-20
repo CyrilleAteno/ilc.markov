@@ -6,11 +6,10 @@ import org.junit.Test;
 
 public class MarkovTest {
 
-	Markov markov = new Markov();
+	Markov m = new Markov();
 
 	@Test
 	public void test() {
-		Markov m = new Markov();
 		m.readFile("cosette.txt");
 		Couple p = Markov.randomElement(m.couples.keySet());
 		String res = m.generateText(p, 10);
@@ -18,4 +17,26 @@ public class MarkovTest {
 		System.out.println(res);
 	}
 
+	@Test(expected = NullPointerException.class)
+	public void should_return_exception_when_p_isNull() {
+		m.generateText(null, 10);
+	}
+
+	@Test
+	public void should_not_null_when_text3() {
+		m.readFile("test3.txt");
+		Couple p = Markov.randomElement(m.couples.keySet());
+		String res = m.generateText(p, 10);
+		assertNotNull(res);
+		System.out.println(res);
+	}
+
+	@Test
+	public void should_not_null_when_text4() {
+		m.readFile("test4.txt");
+		Couple p = Markov.randomElement(m.couples.keySet());
+		String res = m.generateText(p, 10);
+		assertNotNull(res);
+		System.out.println(res);
+	}
 }
