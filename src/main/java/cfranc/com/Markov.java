@@ -11,7 +11,7 @@ import java.util.Vector;
 
 
 public class Markov {
-
+ 
 	HashMap<Couple, List<String>> couples;
 
 	public Markov() {
