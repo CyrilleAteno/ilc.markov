@@ -15,11 +15,22 @@ TP NOTE 4A ILC 2019
 ## Functions to be tested
 Hereafter, for each classes give function to be tested 
 
-### Classe Coulpe
+### Classe Couple
 #### functions
+
+    - Couple.hashCodeEclipse() //Fonction non utilisé ; pas de test pour celle-ci
+    - Couple.equals() --> Chaque condition de cette méthode
+    - 
+
 
 ### Classe Markov
 #### function
+
+    - Markov.readFile():
+        ~ if pour savoir si le scanner éxiste
+
+    - Markov.generateText()
+
 
 ## Tricks & tips
 

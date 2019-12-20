@@ -84,8 +84,7 @@ public class Markov {
 	      String s = randomElement(l);
 	      res += s + " ";
 	      p = new Couple(p.getSecond(), s);
-	    }
-
+            }
 		return res;
 	}
 
