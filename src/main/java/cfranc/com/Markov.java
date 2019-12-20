@@ -9,11 +9,17 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
-
+/**
+ * Classe generant un dictionnaire, HashMap de Couple et une liste de String
+ * @author dm663891
+ */
 public class Markov {
 
 	HashMap<Couple, List<String>> couples;
 
+        /**
+         * Creation d'un objet de type Markov
+         */
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
@@ -28,7 +34,12 @@ public class Markov {
 			}
 		return null;
 	}
-
+        
+        /**
+         * Retourne 
+         * @param v
+         * @return 
+         */
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
