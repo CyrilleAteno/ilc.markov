@@ -12,10 +12,12 @@ public class Markov {
 
 	HashMap<Couple, List<String>> couples;
 
+        //Constructor
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
 
+        //Return a random element of the collection c
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
@@ -27,11 +29,13 @@ public class Markov {
 		return null;
 	}
 
+        //Generation of random element of an array
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+        //Read a file by its path and learn the words
 	public void readFile(String path) throws FileNotFoundException{
 		Scanner sc;
 		sc = new Scanner(new File(path));
@@ -60,6 +64,7 @@ public class Markov {
 		sc.close();
 	}
 
+        //Generate a sentence (res)
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;

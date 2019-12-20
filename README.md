@@ -16,10 +16,15 @@ TP NOTE 4A ILC 2019
 Hereafter, for each classes give function to be tested 
 
 ### Classe Couple
-#### functions 
+#### functions :
+    equals()
 
 ### Classe Markov
 #### function
+    randomElement (collection)
+    randomElement (list)
+    readFile(String path)
+    generateText(Couple p, int words)
 
 ## Tricks & tips
 
