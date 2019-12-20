@@ -5,8 +5,8 @@ TP NOTE 4A ILC 2019
 v- Fork this github repository
 v- Run the project
 v- Comment the 2 classes
-- Complete the next section : functions to be tested
-- Commit your changes (commit README.md)
+v- Complete the next section : functions to be tested
+v- Commit your changes (commit README.md)
 - Make tests (call your test functions using the rule: GIVEN_WHEN_THEN) 
 - Commit your changes
 - On github, make a pull request 
@@ -17,10 +17,16 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Couple
 #### functions
+public Couple(String w1, String w2)
+int hashCodeEclipse()
 public boolean equals(Object obj)
 
 ### Classe Markov
-#### function
+#### functions
+public Markov()
+static <E> E randomElement(Collection<E> c)
+private String randomElement(List<String> v)
+public void readFile(String path) throws FileNotFoundException
 private String randomElement(List<String> v)
 
 ## Tricks & tips
