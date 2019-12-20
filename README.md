@@ -18,8 +18,12 @@ Hereafter, for each classes give function to be tested
 ### Classe Coulpe
 #### functions
 
+- hashCodeEclipse()
+
 ### Classe Markov
 #### function
+- generateText()
+- readfile ()
 
 ## Tricks & tips
 
