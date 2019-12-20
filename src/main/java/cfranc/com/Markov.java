@@ -9,15 +9,27 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
-
+/**
+ * Classe generant un dictionnaire, HashMap de Couple et une liste de String
+ * @author dm663891
+ */
 public class Markov {
 
 	HashMap<Couple, List<String>> couples;
 
+        /**
+         * Creation d'un objet de type Markov
+         */
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
 
+        /**
+         * Va chercher un morceau de phrase aleatoire dans un fichier
+         * @param <E>
+         * @param c
+         * @return 
+         */
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
@@ -28,12 +40,20 @@ public class Markov {
 			}
 		return null;
 	}
-
+        
+        /**
+         * @param v Chaine de caractere dans laquelle on veut prendre une element aleatoire
+         * @return une chaine de caractere aleatoire dans la liste passee en parametre
+         */
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+        /**
+         * Permet de lire un fichier passe en parametre
+         * @param path 
+         */
 	public void readFile(String path) {
 		Scanner sc;
 		try {
@@ -66,7 +86,13 @@ public class Markov {
 		}
 
 	}
-
+        
+        /**
+         * Cree une phrase aleatoire d un nombre de mots passe en parametre a partir d un debut de phrase aleatoire
+         * @param p Le debut de phrase aleatoire
+         * @param words Le nombre de mots que doit contenir la phrase
+         * @return res Une phrase aleatoire
+         */
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;

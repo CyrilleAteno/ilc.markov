@@ -13,13 +13,15 @@ TP NOTE 4A ILC 2019
 - that ends
 
 ## Functions to be tested
-Hereafter, for each classes give function to be tested 
+The functions needed to be tested are:
 
-### Classe Coulpe
-#### functions
+### Into Markov : 
+- randomElement() -- tester si la liste n'est pas vide
+- readFile()
+- generateText() -- si le nombre de mots généré est le bon 
 
-### Classe Markov
-#### function
+#### Into Couple : 
+- hashcodeEclipse() -- le résultat n'est pas nul 
 
 ## Tricks & tips
 
