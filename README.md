@@ -20,7 +20,6 @@ Hereafter, for each classes give function to be tested
 #### (equals)
 
 ### Classe Markov
-#### randElement
 #### readFile
 #### generateText
 
