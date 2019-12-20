@@ -18,6 +18,7 @@ public class Markov {
 	}
 
         //cette fct retourne un élément aléatoire dans un collection donnée en paramètre
+        //elle n'est pas utilié dans le code
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
