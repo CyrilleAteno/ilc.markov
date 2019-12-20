@@ -29,6 +29,7 @@ equals(Object obj) car c'est une réécritur ed'un fction existante
 randomElement(Collection<E> c) pas de test car la fct n'est pas utilisée
 readFile(String path) pas de test sur le scanner car fct inié a java
 generateText(Couple p, int words)
+randomElement(List<String> v) difficile a tester ou peut dire que la fonction random a été valider par java mais on test si il n'y a pas d'out of bound
 
 ## Tricks & tips
 
