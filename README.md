@@ -27,6 +27,7 @@ Hereafter, for each classes give function to be tested
         randomElement (collection)
         randomElement (list)
         readFile
+        generateText (unfinished...)
 
 ## Tricks & tips
 
