@@ -40,7 +40,7 @@ public class Couple {
 		return hashCodeEclipse();
 	}
 
-        
+        //Function to hash
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
