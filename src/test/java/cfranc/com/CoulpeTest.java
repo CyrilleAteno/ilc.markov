@@ -6,8 +6,13 @@ import org.junit.Test;
 
 public class CoulpeTest {
 
+	private String first = "je suis premier";
+	private String second = "je suis 2e";
+
+
+	//Tester le retour du premier element;
 	@Test
-	public void test() {
+	public void testGetFirst() {
 		fail("Not yet implemented");
 	}
 

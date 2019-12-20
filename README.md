@@ -17,9 +17,14 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+- hashCodeEclipse()
+- equals(Object obj)
 
 ### Classe Markov
 #### function
+- randomElement(List<String> v)
+- readFile(String path)
+- String generateText(Couple p, int words)
 
 ## Tricks & tips
 

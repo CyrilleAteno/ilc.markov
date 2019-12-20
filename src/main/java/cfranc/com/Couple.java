@@ -32,6 +32,7 @@ public class Couple {
 		return this.first.hashCode() + this.second.hashCode();
 	}
 
+	//FONCTION A TESTER:
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
