@@ -10,7 +10,7 @@ public class MarkovTest {
     Couple c2 = new Couple("Bonjour", "Bonsoir");
     Couple c3 = new Couple("Au revoir", "Bonnes vacances");
     int w = 10;
-    //oui 
+    //oui 541654651
     
 	@Test
 	public void test() {
