@@ -9,15 +9,23 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
-
+/**
+ * La Classe Markov représente un dictionnaire/Annuaire mettant en rélation des couples
+ * de mots et des listes de mots pour permettre la génération de texte.
+ * @author jm512325
+ */
 public class Markov {
 
-	HashMap<Couple, List<String>> couples;
+	HashMap<Couple, List<String>> couples;      // Dictionnaire de couple
 
+        /**
+         * Constructeur de Markov (Dictionnaire/Annuaire entre des couples de
+         * mots et des listes de chaines de caractères) 
+         */
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
-
+        
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
@@ -29,11 +37,20 @@ public class Markov {
 		return null;
 	}
 
+        /**
+         * Recurpèrer un element (String) aleatoirement dans la liste passé en paramètre
+         * @param v : Liste de String
+         * @return  : Chaine de caractères aléatoirement sélectionné
+         */
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+        /**
+         * Lit un fichier depuis un chemin système et génère les couples de mot qu'il contient.
+         * @param path : Chemin vers le fichier
+         */
 	public void readFile(String path) {
 		Scanner sc;
 		try {
@@ -67,6 +84,12 @@ public class Markov {
 
 	}
 
+        /**
+         * Génère un texte à partir d'un couple de mot et d'un nombre de mot
+         * @param p     : Le couple générateur
+         * @param words : Nombre de mots à généré.
+         * @return le texte généré.
+         */
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
