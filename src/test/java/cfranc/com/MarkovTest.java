@@ -1,5 +1,6 @@
 package cfranc.com;
 
+
 import static org.junit.Assert.*;
 
 import java.io.FileNotFoundException;
@@ -17,5 +18,22 @@ public class MarkovTest {
 		assertNotNull(res);
 		System.out.println(res);
 	}
-
+        
+        public void readTextWhenTest1IsGiven() throws FileNotFoundException{
+            int expected = 0;
+            String path = "test1.txt";
+            Markov str = new Markov();
+            str.readFile(path);
+            int actual = str.couples.size();
+            assertEquals(expected, actual);
+            
+        }
+        public void readTextWhenTest4IsGiven() throws FileNotFoundException{
+             int expected = 1;
+             String path ="test4.txt";
+             Markov str = new Markov();
+             str.readFile(path);
+             int actual = str.couples.size();
+             assertEquals(expected, actual);
+         }      
 }
