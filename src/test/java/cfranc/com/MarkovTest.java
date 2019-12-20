@@ -1,5 +1,7 @@
 package cfranc.com;
 
+import java.util.ArrayList;
+import java.util.List;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
@@ -15,5 +17,42 @@ public class MarkovTest {
 		assertNotNull(res);
 		System.out.println(res);
 	}
+        
+        @Test
+        public void randomElementVoid(){
+            List<String> l = new ArrayList<String>();
+            Markov m = new Markov();
+            String res = m.randomElement(l);
+        }
+        
+         @Test
+        public void readtext1(){
+            Markov m = new Markov();
+            m.readFile("text1.txt");
+             assertEquals(0, m.couples.size());
+           
+        }
+           @Test
+        public void readtext2(){
+            Markov m = new Markov();
+            m.readFile("text2.txt");
+             assertEquals(0, m.couples.size());
+           
+        }
+           @Test
+        public void readtext3(){
+            Markov m = new Markov();
+            m.readFile("text3.txt");
+             assertEquals(2, m.couples.size());
+           
+        }
+        
+           @Test
+        public void readtext4(){
+            Markov m = new Markov();
+            m.readFile("text4.txt");
+             assertEquals(3, m.couples.size());
+           
+        }
 
 }
