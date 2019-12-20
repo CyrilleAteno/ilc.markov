@@ -18,7 +18,6 @@ Hereafter, for each classes give function to be tested
 ### Classe Coulpe
 #### functions
 init()
-Couple()
 test des getter et setter
 hashCodeEclipse() 
 pas hashCode() car c'est juste un return du test de hashCodeEclipse()
