@@ -6,6 +6,10 @@ public class Couple {
 	private String second;
 	
 	public Couple(String w1, String w2) {
+		init(w1, w2);
+	}
+
+	public void init(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
 	}
@@ -28,8 +32,7 @@ public class Couple {
 
 	@Override
 	public int hashCode() {
-		//return hashCodeEclipse();
-		return this.first.hashCode() + this.second.hashCode();
+		return hashCodeEclipse();
 	}
 
 	int hashCodeEclipse() {

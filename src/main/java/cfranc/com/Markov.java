@@ -7,8 +7,6 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Vector;
-
 
 public class Markov {
 
@@ -34,37 +32,32 @@ public class Markov {
 		return v.get(n);
 	}
 
-	public void readFile(String path) {
+	public void readFile(String path) throws FileNotFoundException{
 		Scanner sc;
-		try {
-			sc = new Scanner(new File(path));
+		sc = new Scanner(new File(path));
 
-			String w1 = null;
-			String w2 = null;
-			Couple prev = new Couple(w1, w2);
+		String w1 = null;
+		String w2 = null;
+		Couple prev = new Couple(w1, w2);
+		if (sc.hasNext()) {
+			w1 = sc.next();
 			if (sc.hasNext()) {
-				w1 = sc.next();
-				if (sc.hasNext()) {
-					w2 = sc.next();
-					prev = new Couple(w1, w2);
-					while (sc.hasNext()) {
-						String w3 = sc.next();
-						List<String> l = this.couples.get(prev);
-						if(l == null) {
-							l = new ArrayList<String>();
-							this.couples.put(prev, l);
-						}
-						l.add(w3);
-						Couple e = new Couple(prev.getSecond(), w3);
-						prev = e;
+				w2 = sc.next();
+				prev = new Couple(w1, w2);
+				while (sc.hasNext()) {
+					String w3 = sc.next();
+					List<String> l = this.couples.get(prev);
+					if(l == null) {
+						l = new ArrayList<String>();
+						this.couples.put(prev, l);
 					}
+					l.add(w3);
+					Couple e = new Couple(prev.getSecond(), w3);
+					prev = e;
 				}
 			}
-			sc.close();
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
 		}
-
+		sc.close();
 	}
 
 	public String generateText(Couple p, int words) {
@@ -82,6 +75,4 @@ public class Markov {
 
 		return res;
 	}
-
-
 }

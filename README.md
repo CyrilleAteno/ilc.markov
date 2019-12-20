@@ -25,3 +25,9 @@ Hereafter, for each classes give function to be tested
 
 - Never test auto generate code
 - Never test creator (its a design problem)
+- Use @Test before each testFunction !
+- When you test a void function of the class Markov, then test the markov instance's state
+> Markov m=new Markov();
+> int actual = m.couples.size();
+- You can test a function than throws an exception with the argument: expected
+> @Test(expected=Exception.class)
