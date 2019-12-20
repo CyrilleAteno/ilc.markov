@@ -1,14 +1,19 @@
 package cfranc.com;
 
+//Classe
+
 public class Couple {
 	
 	private String first;
 	private String second;
 	
+        //Constructeur de la classe Couple avec deux String
+        //en paramètre, en appelant la méthode init 
 	public Couple(String w1, String w2) {
 		init(w1, w2);
 	}
 
+        //Stocke les deux String dans deux attributs différents
 	public void init(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
@@ -30,11 +35,17 @@ public class Couple {
 		this.second = second;
 	}
 
+        /*Surcharge la fonction hashCode() pour utiliser la méthode hashCodeEclipse()
+        déclarée plus bas pour gérer deux attributs différents dans un même hashCode
+        */
 	@Override
 	public int hashCode() {
 		return hashCodeEclipse();
 	}
 
+        /*Répartit équitablement les mots non par ordre alphabétique mais par
+        hashCode. Tous les objets hashé seront accessibles équitablement en mémoire
+        et permet de tirer un mot vraiment aléatoirement*/
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
@@ -43,6 +54,8 @@ public class Couple {
 		return result;
 	}
 	
+        /*Surcharge la fonction equals pour comparer si deux instances ont 
+        la même valeur de hachage*/
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

@@ -15,11 +15,13 @@ TP NOTE 4A ILC 2019
 ## Functions to be tested
 Hereafter, for each classes give function to be tested 
 
-### Classe Coulpe
-#### functions
+### Classe Couple
+#### equals
 
 ### Classe Markov
-#### function
+#### generateText
+#### readFile
+#### randomElement : difficile à tester car elle est basée sur la fonction random()
 
 ## Tricks & tips
 
