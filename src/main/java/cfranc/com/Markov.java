@@ -14,13 +14,15 @@ public class Markov {
 
 	HashMap<Couple, List<String>> couples;
 
+        //Constructeur de la classe Markov permttant d'ajouter une liste de mot après le couple
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
 
+        //Sélectionne un élément aléatoire dans la collection et retourne l'élément choisit
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
-		int n = (int) (Math.random() * c.size());
+		int n = (int) (Math.random() * c.size()); //n : aléatoire générer
 		for (E x : c)
 			if (n-- == 0) {
 				return x;
@@ -29,11 +31,13 @@ public class Markov {
 		return null;
 	}
 
+        //Sélectionne un élément aléatoire dans la liste et retourne l'élément choisit
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+        //Méthode permettant de lire et récupérer les mots du fichier afin de créer des couples
 	public void readFile(String path) {
 		Scanner sc;
 		try {
@@ -67,7 +71,9 @@ public class Markov {
 
 	}
 
+        //Méthode permettant la génération d'une phrase et les concatène tous
 	public String generateText(Couple p, int words) {
+                //Récupére le nombre de mots du couple
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
 	    while (words-- > 0) {
@@ -78,8 +84,7 @@ public class Markov {
 	      String s = randomElement(l);
 	      res += s + " ";
 	      p = new Couple(p.getSecond(), s);
-	    }
-
+            }
 		return res;
 	}
 
