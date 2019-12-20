@@ -33,11 +33,11 @@ public class Markov {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
-
+//on parcours avec has.next() la hashmap et on ajout dans une liste la succesion des couples 
 	public void readFile(String path) {
 		Scanner sc;
 		try {
-			sc = new Scanner(new File(path));
+			sc = new Scanner(new File(path));  
 
 			String w1 = null;
 			String w2 = null;
@@ -66,7 +66,9 @@ public class Markov {
 		}
 
 	}
-
+//generate sentences
+        //parametre p couple of word et word c est le nombre des words
+        //return une phrase aleatoire de la liste l qui prend ses valeurs du couple p.
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
