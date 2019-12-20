@@ -17,9 +17,18 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+    -equals 
 
 ### Classe Markov
 #### function
+Functions to be tested : 
+    -hashCodeEclipse() 
+    - E randomElement : there is a condition if(n-- ==0 ) since we decrement n if would be good to test if n can be negative. ##Edit : there is no chance n is negative so testing is not necessary
+    - randomElement : we don't want n to be negative, so we should test if it is positive. ##Edit n is never negative so this test is useless.
+    - readFile
+    
+
+
 
 ## Tricks & tips
 
@@ -31,3 +40,4 @@ Hereafter, for each classes give function to be tested
 > int actual = m.couples.size();
 - You can test a function than throws an exception with the argument: expected
 > @Test(expected=Exception.class)
+
