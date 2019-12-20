@@ -1,27 +1,30 @@
 package cfranc.com;
 
 public class Couple {
-	
+	//La classe couple est composé de deux attributs :
 	private String first;
 	private String second;
 	
+        //Constructeur de Couple
 	public Couple(String w1, String w2) {
 		init(w1, w2);
 	}
-
+        
 	public void init(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
 	}
 	
+        //Accesseur et Set de la premiere chaine de caractere
 	public String getFirst() {
 		return first;
 	}
-
+        
 	public void setFirst(String first) {
 		this.first = first;
 	}
-
+           
+        //Accesseur et Set de la seconde chaine de caractere
 	public String getSecond() {
 		return second;
 	}
@@ -29,12 +32,16 @@ public class Couple {
 	public void setSecond(String second) {
 		this.second = second;
 	}
-
+        
+        /*Redefiniton de la fonction hashCode 
+        pour quelle appel la fonction hashCodeEclipse()*/
 	@Override
 	public int hashCode() {
 		return hashCodeEclipse();
 	}
-
+        
+        /*La methode hache le code pour permetre une meilleur
+        repartition dans le dictionaire*/ 
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
@@ -43,6 +50,7 @@ public class Couple {
 		return result;
 	}
 	
+        //Methode qui défini si deux classes Couple sont equivalent
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

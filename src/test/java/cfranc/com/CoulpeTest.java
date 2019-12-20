@@ -8,7 +8,9 @@ public class CoulpeTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+            Couple c0 = new Couple("0", "0");
+            Couple c0Bis = new Couple("0", "0");
+            //fail("Not yet implemented");
 	}
 
 }
