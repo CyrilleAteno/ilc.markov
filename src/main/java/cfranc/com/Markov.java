@@ -16,25 +16,24 @@ public class Markov {
 
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
-	} // Constructeur
-
+	} // Constructeur de la classe Markov avec des collections
+        
 	@SuppressWarnings("unused")
-	static <E> E randomElement(Collection<E> c) {
+	static <E> E randomElement(Collection<E> c) { // Sélection d'un élément aléatoire dans la collection donnée
 		int n = (int) (Math.random() * c.size());
 		for (E x : c)
-			if (n-- == 0) {
+			if (n-- == 0) { // Si n-1 = 0 on retourne l'élément
 				return x;
-
 			}
 		return null;
 	}
-
+        // Selection d'un élément aléatoire dans la liste de String donnée, retourne l'élément choisit
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
-	public void readFile(String path) {
+	public void readFile(String path) { // Méthode permettant de lire et récupérer les mots dans les fichiers pour créer des couples
 		Scanner sc;
 		try {
 			sc = new Scanner(new File(path));
@@ -66,7 +65,7 @@ public class Markov {
 		}
 
 	}
-
+        // Récupère les mots des couples créés ainsi que le nombre de mots et les concatène tous dans un String, puis retourne le résultat.
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
