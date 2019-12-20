@@ -8,7 +8,7 @@ public class CoulpeTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		System.out.println("Helloworld");
 	}
 
 }
