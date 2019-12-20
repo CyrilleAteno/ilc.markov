@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CoulpeTest {
-    // test
+    
     Couple c1 = new Couple("Bonjour","Bonsoir");
     Couple c2 = new Couple("Bonjour", "Bonsoir");
 

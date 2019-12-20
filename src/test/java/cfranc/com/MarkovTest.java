@@ -10,7 +10,7 @@ public class MarkovTest {
     Couple c2 = new Couple("Bonjour", "Bonsoir");
     Couple c3 = new Couple("Au revoir", "Bonnes vacances");
     int w = 10;
-    //oui 541654651
+    //oui 541654651    
     
 	@Test
 	public void test() {
@@ -27,7 +27,7 @@ public class MarkovTest {
 	}
         
         @Test
-        public void readFile()
+        public void readFile1()
         {
             // si il y a un mot on stock ce mot et on fait un deuxieme if
             // si il y a pas de mot apres le premier mot on close
@@ -35,10 +35,45 @@ public class MarkovTest {
             // si il y a un troisieme, on entre dans le while
             // si il 'y a jamais eu de mots associe a ce couple la 
             // on rajoute le mot comme compatible, on ajoute le troisieme comme mot qui suit les deux premiers
-            // hashmap ou on cherche tout les troiième mot qui peuvent aller avec un couple de mot
+            // hashmap ou on cherche tout les troisième mot qui peuvent aller avec un couple de mot
             
             // 4 fichiers pour tester
+            
+            Markov m = new Markov();
+            m.readFile("test1.txt");
+            int expected = 1;
+            int actual = m.couples.size();
+            assertEquals(expected,actual);
         }
         
+        @Test
+        public void readFile2 ()
+        {
+            Markov m = new Markov();
+            m.readFile("test2.txt");
+            int expected = 0;
+            int actual = m.couples.size();
+            assertEquals(expected,actual);
+        }
+        
+        @Test
+        public void readFile3 ()
+        {
+            Markov m = new Markov();
+            m.readFile("test3.txt");
+            int expected = 1;
+            int actual = m.couples.size();
+            assertEquals(expected,actual);
+        }
+        
+        @Test
+        public void readFile4 ()
+        {
+            Markov m = new Markov();
+            m.readFile("test2.txt");
+            int expected = 0;
+            int actual = m.couples.size();
+            assertEquals(expected,actual);
+        }
 
 }
