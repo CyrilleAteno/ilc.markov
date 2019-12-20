@@ -42,7 +42,7 @@ public class Couple {
 	
 	@Override // Méthode de vérification des conditions de classes
 	public boolean equals(Object obj) {
-		if (this == obj) // Si l'argument donné est l'objet -> true
+		if (this == obj) // Si l'argument donné est le m�me que l'objet -> true
 			return true;
 		if (obj == null) // Si l'objet donné est null -> false
 			return false;
