@@ -68,7 +68,7 @@ public class MarkovTest {
             Markov m = new Markov();
             m.readFile("test2.txt");
             String expected = "Il fait ";
-            Couple p = Markov.randomElement(m.couples.keySet());
+            Couple p = new Couple("Il","fait");
             String actual = m.generateText(p, 2);
             assertEquals(expected, actual);
         }

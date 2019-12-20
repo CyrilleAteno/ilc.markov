@@ -23,7 +23,7 @@ Hereafter, for each classes give function to be tested
 ### Classe Markov
 #### function
 - randomElement(List<String> v)
-- (On ne teste pas l'autre fonction randomElement car on ne l'utilise pas)
+- randomElement(Collection<E> c)
 - readFile
 - generateText
 
