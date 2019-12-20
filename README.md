@@ -15,6 +15,7 @@ TP NOTE 4A ILC 2019
 ## Functions to be tested
 The functions needed to be tested are:
   - Markov
+  - Couple
 
 ### Classe Coulpe
 #### functions
