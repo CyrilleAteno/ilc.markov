@@ -9,7 +9,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
+/*
+La classe Markov permet des objets qui contient une liste des Couples
+l'interet de cette classe est de generer des textes/phrases a partir des fichiers et des objs Couple passes comme params
 
+*/
 public class Markov {
 
 	HashMap<Couple, List<String>> couples;
