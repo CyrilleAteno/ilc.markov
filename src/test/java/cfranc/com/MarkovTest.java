@@ -65,4 +65,5 @@ public class MarkovTest {
             String actual = m.generateText(c, 0);            
             assertEquals(expected, actual);
         }
+        
 }
