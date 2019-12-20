@@ -10,5 +10,10 @@ public class CoulpeTest {
 	public void test() {
 		fail("Not yet implemented");
 	}
+        
+        //   Test de la classe int hashCodeEclipse()
+        public void testFirstNull(){
+            
+        }
 
 }
