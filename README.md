@@ -13,13 +13,21 @@ TP NOTE 4A ILC 2019
 - that ends
 
 ## Functions to be tested
-Hereafter, for each classes give function to be tested 
-
-### Classe Coulpe
+### Classe Couple
 #### functions
+	- On ne teste pas la fonction init(), ce n'est que de l'affectation basique
+	- On peut tester à la limite la méthode equals() mais celle-ci n'est pas utilisée
+	- La méthode hashCodeEclipse() peut être testée, deux couples sont censés avoir un hash différent s'ils ne sont pas égaux
 
 ### Classe Markov
-#### function
+#### functions
+	- Il faut tester la méthode readFile(), on peut tester la taille de la liste des couples de mots correspond à ce qu'il devrait y avoir en testant sur des fichiers textes de test de tailles différentes
+	- Plusieurs choses sont à tester dans la méthode generateText() :
+		- le cas où le couple de départ est null ou incomplet
+		- que le texte générer n'ait pas plus de mots que demandés
+	- La méthode randomElement() peut être testée :
+		- si la liste donnée est nulle ou vide
+		- si le mot renvoyé est bien dans la liste
 
 ## Tricks & tips
 
