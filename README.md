@@ -20,7 +20,7 @@ Hereafter, for each classes give function to be tested
 - Test de la construction d'un couple
 - Test de la fonction SetFirst
 - Test de la fonction SetSecond
-- Test pour des 8 cas de la fonction equals de Couple
+- Test pour des 6 cas de la fonction equals de Couple
 
 ### Classe Markov
 #### functions
