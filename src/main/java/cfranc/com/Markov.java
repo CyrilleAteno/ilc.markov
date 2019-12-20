@@ -37,7 +37,7 @@ public class Markov {
             return v.get(n);
 	}
         
-        //Remplie la HaseMap
+        //Remplie la HaseMap avec un fichier donner en parametre
 	public void readFile(String path) throws FileNotFoundException{
             Scanner sc;
             sc = new Scanner(new File(path));
