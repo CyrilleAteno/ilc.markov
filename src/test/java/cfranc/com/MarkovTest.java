@@ -25,7 +25,7 @@ public class MarkovTest {
             Couple p = Markov.randomElement(m.couples.keySet());
             String res = m.generateText(p, 3);
             
-            assertEquals("It is raining", res);
+            assertEquals("Il fait très", res);
         }
         
         //Test readFile with test1.txt. Hashmap should be null
