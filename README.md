@@ -17,9 +17,16 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+- equals
 
 ### Classe Markov
 #### function
+- readFile
+- generateText
+- randomElement & randomElement : Il faudra verifier que ces fonctions ne
+renvois pas toujours le même element et si on veux pousser les tests plus loint
+on peux analyser la statistque des elements retournés (pour voir si il y a pas des
+element qui revient sinificativement plus souvent)
 
 ## Tricks & tips
 
