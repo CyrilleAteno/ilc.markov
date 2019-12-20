@@ -16,7 +16,7 @@ public class Markov {
 
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
-	}
+	} // Constructeur
 
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
