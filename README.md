@@ -17,10 +17,14 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+-int hashCodeEclipse()
+-public boolean equals(Object obj)
 
 ### Classe Markov
 #### function
-
+-static <E> E randomElement(Collection<E> c)
+-public void readFile(String path)
+-public String generateText(Couple p, int words
 ## Tricks & tips
 
 - Never test auto generate code
