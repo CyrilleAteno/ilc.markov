@@ -5,23 +5,24 @@ public class Couple {
 	private String first;
 	private String second;
 	
+        //Constructeur surcharger de la classe Couple 
 	public Couple(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
 	}
-	
+	//Retourne le 1er
 	public String getFirst() {
 		return first;
 	}
-
+        //modifie le 1er
 	public void setFirst(String first) {
 		this.first = first;
 	}
-
+        //retourne le 2nd
 	public String getSecond() {
 		return second;
 	}
-
+        //modifie le 2nd
 	public void setSecond(String second) {
 		this.second = second;
 	}
