@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MarkovTest {
-        /*
+        
 	@Test
 	public void test() {
 		Markov m = new Markov();
@@ -14,7 +14,7 @@ public class MarkovTest {
 		String res = m.generateText(p, 10);
 		assertNotNull(res);
 		System.out.println(res);
-	}*/
+	}
 
         @Test
         public void testReadFile(){
