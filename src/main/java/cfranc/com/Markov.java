@@ -10,12 +10,15 @@ import java.util.Scanner;
 
 public class Markov {
 
+        //Attribut
 	HashMap<Couple, List<String>> couples;
 
+        //Constructeur de la classe Markov
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
 
+        //permet de trouver un élément aléatoire
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
@@ -27,11 +30,13 @@ public class Markov {
 		return null;
 	}
 
+        //Permet de retourner un éklément aléatoir contenu dans la liste
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+        //permet de lire le fichier et stocker les chaines de caractères du fichier
 	public void readFile(String path) throws FileNotFoundException{
 		Scanner sc;
 		sc = new Scanner(new File(path));
@@ -60,6 +65,7 @@ public class Markov {
 		sc.close();
 	}
 
+        //permet de générer un texte en fonction du couple et d'un mot passés en paramètre 
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
