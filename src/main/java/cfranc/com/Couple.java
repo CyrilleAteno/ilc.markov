@@ -2,18 +2,22 @@ package cfranc.com;
 
 public class Couple {
 	
+        //Attributs de la classe
 	private String first;
 	private String second;
 	
+        //Constructeur de la classe
 	public Couple(String w1, String w2) {
 		init(w1, w2);
 	}
 
+        //Initialise les attributs de la classe, fonction appellée dans le constructeur
 	public void init(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
 	}
 	
+        //getter et setter des attributs First et Second
 	public String getFirst() {
 		return first;
 	}
@@ -30,12 +34,15 @@ public class Couple {
 		this.second = second;
 	}
 
+        //Lance la fonction "hashCodeEclipse()" et retourne la valeur obtenue du hashCode du couple
 	@Override
 	public int hashCode() {
 		return hashCodeEclipse();
 	}
 
+        //permet de retourner le hashCode en fonction des attributs
 	int hashCodeEclipse() {
+                // 31 = valeur choisi par préférence, pas par logique mathématique
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((first == null) ? 0 : first.hashCode());
@@ -43,6 +50,8 @@ public class Couple {
 		return result;
 	}
 	
+        //permet de comparer deux objets entre eux
+        //Retourne true si ils sont égaux, false si ils sont différents
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
