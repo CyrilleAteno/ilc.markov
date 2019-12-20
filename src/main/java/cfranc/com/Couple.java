@@ -3,6 +3,7 @@ package cfranc.com;
 /* La classe Couple permet de creer des objets Couple
     avec deux attributes first et second 
     et une fonction hashcodeEclipse permet de renvoyer une valeur de hashCode 
+
 */
 public class Couple {
 	
