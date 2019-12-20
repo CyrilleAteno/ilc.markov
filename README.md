@@ -13,13 +13,15 @@ TP NOTE 4A ILC 2019
 - that ends
 
 ## Functions to be tested
-Hereafter, for each classes give function to be tested 
+Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
-#### functions
+#### hashCodeEclipse
+#### (equals)
 
 ### Classe Markov
-#### function
+#### readFile
+#### generateText
 
 ## Tricks & tips
 
