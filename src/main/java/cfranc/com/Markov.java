@@ -9,15 +9,23 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
+/* 
+
+Creation de la d'une hashmap qui va permettre d'associer une clés à un objet
+Creation de la classe Markov qui prend en paramètre les élements de la classe couple 
+et une liste d'élements.
+
+*/
 
 public class Markov {
-
+    
 	HashMap<Couple, List<String>> couples;
 
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
 
+        
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
@@ -29,6 +37,9 @@ public class Markov {
 		return null;
 	}
 
+        /*
+        Selection en aleatoire d'un élement dans la liste des string 
+        */
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
@@ -67,6 +78,10 @@ public class Markov {
 
 	}
 
+        
+        /*
+        Cette fonction permet de generer un text à partir du nombre de mots 
+        */
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;

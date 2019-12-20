@@ -1,10 +1,15 @@
 package cfranc.com;
 
+// cette classe permet d'associer 2 mots.
+
+
 public class Couple {
 	
 	private String first;
 	private String second;
 	
+  // creation du constructeur couple avec pour argument les deuc mots à associer 
+        
 	public Couple(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
