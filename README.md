@@ -16,10 +16,19 @@ TP NOTE 4A ILC 2019
 Hereafter, for each classes give function to be tested 
 
 ### Classe Coulpe
-#### functions
+#### functions 
+#####Test
+- Fonction equals
+##### Ignore
+- Fonction hascode car inutilisée
 
 ### Classe Markov
 #### function
+##### Test
+- Fonction readfile 
+- Fonction generateText
+- Fonction randomElement , on peut la tester sur une liste assez grande afin de voir si elle renvoit bien
+	quelque chose d'aléatoire, et de vérifier qu'elle renvoit rien sur une liste vide
 
 ## Tricks & tips
 
