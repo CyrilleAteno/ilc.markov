@@ -1,5 +1,6 @@
 # ilc.markov
 TP NOTE 4A ILC 2019
+Anaïs MARDAMA NAYAGOM
 
 ## Questions
 - Fork this github repository
@@ -19,6 +20,7 @@ Hereafter, for each classes give function to be tested
 #### functions
 ##### int hashCodeEclipse() {}
 Vérifier si 
+ - si les 2 variables mots de Couple est vide -> pas de crash
  - si le hashcode est bien > 0
 
 ##### Note
@@ -32,6 +34,7 @@ Vérifier si :
  - il ne trouve pas le fichier avec chemin donné -> doit afficher un message et arrêter le programme
  - le fichier donnée est vide ->  doit afficher un message demandant de remplir le fichier et arrêter le programme
  - le fichier n'est pas lisible -> doit afficher un message et arrêter le programme
+ - le couple de mot n'existe pas dans la liste de mots à laquelle il est associé
 
 ##### String generateText(Couple p, int words) {}
 Vérifier si

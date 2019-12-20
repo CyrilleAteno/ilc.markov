@@ -8,7 +8,9 @@ public class CoulpeTest {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		//fail("Not yet implemented");
+		Couple first = new Couple("", "");
+                System.out.println("HashCode "+first.hashCodeEclipse());
 	}
 
 }
