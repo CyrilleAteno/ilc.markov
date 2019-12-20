@@ -67,7 +67,7 @@ public class Markov {
 				prev = new Couple(w1, w2); // On créer un couple de mots avec les 2 précédents
 				while (sc.hasNext()) { // Si on arrive à en trouver un 3ème après nos 2 précédents
 					String w3 = sc.next(); // On attribut ce troisième mot à w3
-					List<String> l = this.couples.get(prev); // On créer une liste l et on lui attribue la valeur
+					List<String> l = this.couples.get(prev); // On créer une liste l et on lui attribue une liste venant de la table de hashage si la référence existe
 					if(l == null) { // Si la liste est null
 						l = new ArrayList<String>(); // On créer un tableau de String
 						this.couples.put(prev, l); // On ajoute le couple de deux mot que l'on a créé à notre liste l
