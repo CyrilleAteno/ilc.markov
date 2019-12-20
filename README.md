@@ -17,9 +17,16 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+- Test de la construction d'un couple
+- Test de la fonction SetFirst
+- Test de la fonction SetSecond
+- Test pour des 6 cas de la fonction equals de Couple
 
-### Classe Markov
-#### function
+### Classe Markov 
+#### functions
+- Test de la construction de Markov
+- Test de la lecture de fichier     
+- Tests de la génération (pour un retour valide et nul) d'un texte à partir d'un couple. (Non terminés)
 
 ## Tricks & tips
 
