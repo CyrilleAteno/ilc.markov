@@ -23,7 +23,6 @@ Hereafter, for each classes give function to be tested
 ### Classe Markov
 #### function
 - randomElement(List<String> v)
-- readFile(String path)
 - String generateText(Couple p, int words)
 
 ## Tricks & tips

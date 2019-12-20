@@ -1,5 +1,9 @@
 package cfranc.com;
 
+//La Classe couple sert à avoir deux éléments de type String (un coupe) afin de former un hashcode etant
+// la somme des hashcodes de chaque élément. Elle permettra aussi par la suite de créer un HashMap dans la classe Markov
+// constituée de N couple(s) de string
+
 public class Couple {
 	
 	private String first;
@@ -32,7 +36,7 @@ public class Couple {
 		return this.first.hashCode() + this.second.hashCode();
 	}
 
-	//FONCTION A TESTER:
+	//FONCTION A TESTER: ICI cette fonction retourne un entier qui est la somme des resulats de de "first" et "second"
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
@@ -40,7 +44,8 @@ public class Couple {
 		result = prime * result + ((second == null) ? 0 : second.hashCode());
 		return result;
 	}
-	
+
+	//Permet de comparer des objets des classes
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

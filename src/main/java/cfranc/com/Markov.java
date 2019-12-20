@@ -29,11 +29,13 @@ public class Markov {
 		return null;
 	}
 
+	//Retourne un élément aléatoire dans la liste de String
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+	//Permet la lecture d'un fichier
 	public void readFile(String path) {
 		Scanner sc;
 		try {
@@ -67,6 +69,7 @@ public class Markov {
 
 	}
 
+	//Générer un texte en fonction du nombre que l'on passe en paramètre et du couple de Strings
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;

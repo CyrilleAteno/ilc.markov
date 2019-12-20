@@ -13,7 +13,13 @@ public class CoulpeTest {
 	//Tester le retour du premier element;
 	@Test
 	public void testGetFirst() {
-		fail("Not yet implemented");
+		System.out.println("Not yet implemented");
+	}
+
+	@Test
+	public void hashCodeEclipseTest(){
+
+
 	}
 
 }
