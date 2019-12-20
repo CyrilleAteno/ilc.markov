@@ -22,7 +22,8 @@ HashCodeEclipse
 
 ### Classe Markov
 #### function
-randomElement
+randomElement(List<String> v)
+(On ne teste pas l'autre fonction randomElement car on ne l'utilise pas)
 readFile
 generateText
 
