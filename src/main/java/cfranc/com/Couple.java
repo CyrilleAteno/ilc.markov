@@ -1,5 +1,10 @@
 package cfranc.com;
 
+/* La classe Couple permet de creer des objets Couple
+    avec deux attributes first et second 
+    et une fonction hashcodeEclipse permet de renvoyer une valeur de hashCode 
+
+*/
 public class Couple {
 	
 	private String first;
@@ -31,12 +36,12 @@ public class Couple {
 		//return hashCodeEclipse();
 		return this.first.hashCode() + this.second.hashCode();
 	}
-
+        // permet de retourner la valeur hashCode 
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((first == null) ? 0 : first.hashCode());
-		result = prime * result + ((second == null) ? 0 : second.hashCode());
+		result = prime * result + ((first == null) ? 0 : first.hashCode()); // res contient prime*result + (si first est null on rajoute 0 si non son hashCode)
+		result = prime * result + ((second == null) ? 0 : second.hashCode()); // res contient prime*result + (si second est null on rajoute 0 si non son hashCode)
 		return result;
 	}
 	

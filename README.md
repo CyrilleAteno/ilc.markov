@@ -17,9 +17,15 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+ - hashCodeEclipse() : on teste si la valeur de hash est equal ou non a 31
+- equals(...) : on teste si obj passant est null/ de meme type/
 
 ### Classe Markov
-#### function
+#### function 
+- readFile(..) : on teste si la fonction permet de lire le fichier d'un chemin qui existe ou pas et si il y a aussi du texte ou non dans le fichier passé
+- generateText(..) : on teste si la focntion permet de generer des phrases on passant un obj Couple/Null et le nombre de mots >= 0 
+- randomElement(..) : on teste si la fonction permet de generer un element aleatoire soit en passant une liste des chaines de caracteres/ Null
+
 
 ## Tricks & tips
 
