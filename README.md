@@ -1,5 +1,6 @@
 # ilc.markov
 TP NOTE 4A ILC 2019
+Bastien Suillot
 
 ## Questions
 - Fork this github repository
@@ -15,12 +16,18 @@ TP NOTE 4A ILC 2019
 ## Functions to be tested
 Hereafter, for each classes give function to be tested 
 
-### Classe Coulpe
+### Classe Couple
 #### functions
-
+    equals
+####functions ignoré(raison)
+        hashCode (non utilisé)
+        hashCodeEclipse (non utilisé)
 ### Classe Markov
-#### function
-
+#### functions
+        randomElement (collection)
+        randomElement (list)
+        readFile
+        generateText
 ## Tricks & tips
 
 - Never test auto generate code
