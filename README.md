@@ -13,7 +13,8 @@ TP NOTE 4A ILC 2019
 - that ends
 
 ## Functions to be tested
-Hereafter, for each classes give function to be tested 
+The functions needed to be tested are:
+  - Markov
 
 ### Classe Coulpe
 #### functions
