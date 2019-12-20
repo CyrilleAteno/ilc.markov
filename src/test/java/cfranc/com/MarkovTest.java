@@ -1,10 +1,12 @@
 package cfranc.com;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
 public class MarkovTest {
+
+	Markov markov = new Markov();
 
 	@Test
 	public void test() {
