@@ -5,15 +5,10 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CoulpeTest {
-
-	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
         
         //Test the case where c1 equals c2 is true
         @Test
-        public void equals_GIVEN_WHEN_THEN_True(){
+        public void equals_SameCouples_True(){
             Couple c1 = new Couple("Alexandre","BILLON");
             Couple c2 = new Couple("Alexandre","BILLON");
             
@@ -29,7 +24,7 @@ public class CoulpeTest {
         
         //Test the case where c1 is not equals to c2 (equals false)
         @Test
-        public void equals_GIVEN_WHEN_THEN_False(){
+        public void equals_DifferentCouples_False(){
             Couple c1 = new Couple("Alexandre","BILLON");
             Couple c2 = new Couple("ESIREM","Java");
             

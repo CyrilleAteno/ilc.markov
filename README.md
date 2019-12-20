@@ -17,7 +17,7 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Couple
 #### functions :
-    equals()
+    equasls()
 
 ### Classe Markov
 #### function
