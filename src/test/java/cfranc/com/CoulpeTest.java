@@ -67,5 +67,34 @@ public class CoulpeTest {
             boolean k = c.equals(c1);
             assertEquals(false,k);
         }
-        
+        @Test
+        public void testhashCodeEclipse(){
+            Couple c = new Couple(null,"b");
+            String s = "b";
+            int h = 31;
+            h = 31*31+s.hashCode();
+            int h1 = c.hashCode();
+            assertEquals(h,h1);
+            
+        }
+        @Test
+        public void testhashCodeEclipse2(){
+            Couple c = new Couple("b",null);
+            String s = "b";
+            int h = 31+s.hashCode();
+            h = 31*h;
+            int h1 = c.hashCode();
+            assertEquals(h,h1);
+            
+        }
+        @Test
+        public void testhashCodeEclipse1(){
+            Couple c = new Couple("a","b");
+            String s = "b";
+            String s1 = "a";
+            int h = 31 + s1.hashCode();
+            h = h*31+s.hashCode();
+            int h1 = c.hashCode();
+            assertEquals(h,h1);
+        }
 }
