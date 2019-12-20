@@ -2,18 +2,22 @@ package cfranc.com;
 
 public class Couple {
 	
+        // Attribute
 	private String first;
 	private String second;
 	
+        //Constructor
 	public Couple(String w1, String w2) {
 		init(w1, w2);
 	}
-
+        
+        //Initialisation
 	public void init(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
 	}
 	
+        //Getters and setters
 	public String getFirst() {
 		return first;
 	}
@@ -30,11 +34,13 @@ public class Couple {
 		this.second = second;
 	}
 
+        //Overload of hashCode() function
 	@Override
 	public int hashCode() {
 		return hashCodeEclipse();
 	}
 
+        
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
@@ -43,6 +49,7 @@ public class Couple {
 		return result;
 	}
 	
+        //Overload of equals(Object obj)
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
