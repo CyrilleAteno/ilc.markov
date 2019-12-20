@@ -9,7 +9,11 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
-
+      /*
+        Cette classe permet de remplir une collection à partir d'un fichier qui lui est passé en paramètre( fonction readFile)
+        et de genérer un texte composé d'un nombre de mot fourni à partir d'un point d'entrée passé en paramètre.
+            
+        */
 public class Markov {
 
 	HashMap<Couple, List<String>> couples;
@@ -33,7 +37,15 @@ public class Markov {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
-
+        /*
+        function name : readFile
+        paramètre :
+            path :type string
+        
+        Role : permet de lire le contenu d'un fichie rpassé en paramètre gràce à son path
+               et de créer des instances de la classe Couple(classe de couple de mot)
+            
+        */
 	public void readFile(String path) {
 		Scanner sc;
 		try {
@@ -42,11 +54,10 @@ public class Markov {
 			String w1 = null;
 			String w2 = null;
 			Couple prev = new Couple(w1, w2);
-			if (sc.hasNext()) {
-				w1 = sc.next();
-				if (sc.hasNext()) {
-					w2 = sc.next();
-					prev = new Couple(w1, w2);
+			if (sc.hasNext()) { // on vérifie si le mot suivant existe
+				w1 = sc.next();// on le met dans w1
+				if (sc.hasNext()) {// on vérifie à nouveau l'existance du mot suivant
+					prev = new Couple(w1, w2); // on crée une instance de la classe Couple à partir des deux mots trouvés
 					while (sc.hasNext()) {
 						String w3 = sc.next();
 						List<String> l = this.couples.get(prev);
@@ -60,12 +71,21 @@ public class Markov {
 					}
 				}
 			}
-			sc.close();
+			sc.close(); //fermetrure du fichier
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
 
 	}
+        /*
+          function name : generateText
+          paramètres : 
+                Couple p : un couple de mot
+                int words : le nombre de mots que nous souhaitons avoir dans le texte géneré.
+          Rôle :
+            Elle permet de générer un texte composé de int words à partir d'un point d'entrée qui lui est passé en paramètre. 
+        
+        */
 
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
