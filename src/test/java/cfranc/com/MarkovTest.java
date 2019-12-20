@@ -16,6 +16,16 @@ public class MarkovTest {
 		System.out.println(res); 
 	}
         
+        //il ne trouve pas le fichier avec chemin donné
+        @Test
+	public void testFileNotFound() {
+		Markov m = new Markov();
+		m.readFile("nonExistant.txt"); 
+                int hash =  m.couples.size();
+                assertNotNull(hash);
+		System.out.println("File non existant\n Nombre de couple= "+hash);
+	}
+        
         //TEST SI le nombre de mots demandés par l'utilisateur dépasse le nombre de mots restant avant la fin du fichier
         @Test
 	public void testSurplus() {
