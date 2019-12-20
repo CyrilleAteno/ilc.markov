@@ -63,7 +63,7 @@ public class Couple {
 	}
 	/**
          * Permet de savoir si l'objet passé en paramètre est égale à celui-ci.
-         * @param obj l'objet à comparer
+         * @param obj l'objet à comparer.
          * @return vrai si l'objet en paramètre est lui-même, elle renvoie faux si l'objet est nul ou si la classe de l'objet est différent
          * de celui-ci. 
          * Dans le cas où l'objet est de classe Couple on regarde si les chaines de caractères sont identitique, si c'est le cas alors la fonction renvoie vrai

@@ -20,7 +20,8 @@ Hereafter, for each classes give function to be tested
 #####Test
 - Fonction equals
 ##### Ignore
-- Fonction hascode car inutilisée
+- Fonction hascode car inutilisee 
+- Fonction hasCodeEclipse inutilisee
 
 ### Classe Markov
 #### function

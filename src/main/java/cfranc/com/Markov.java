@@ -21,7 +21,7 @@ public class Markov {
          * Modèle permettant de sélectionner un objet aléatoire dans n'importe qu'elle type de collection
          * @param <E> le type de la collection
          * @param c la collection
-         * @return l'objet sélectionné aléatoirement
+         * @return l'objet sélectionné aléatoirement.
          */
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
