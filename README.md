@@ -17,10 +17,14 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
-
+ - fonction equals
+ - fonction hashCode non testée car pas utilisé
+ 
 ### Classe Markov
 #### function
-
+ - fonction readFile
+ - fonction generateText
+ - fonction randomElement (tester que cela renvoi quelque chose de type String, vérifier aussi le renvoi avec une liste vide)
 ## Tricks & tips
 
 - Never test auto generate code
