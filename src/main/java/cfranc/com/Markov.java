@@ -81,19 +81,24 @@ public class Markov {
 		sc.close(); // On ferme notre lecteur
 	}
 
+	/**
+	 * @param p Le couple que l'on veut traiter
+	 * @param words Le nombre de mot
+	 * @return Le texte généré par notre fonction
+	 */
 	public String generateText(Couple p, int words) {
-		String res = p.getFirst() + " " + p.getSecond() + " ";
-	    words -= 2;
-	    while (words-- > 0) {
-	      List<String> l = this.couples.get(p);
-	      if (l == null) {
+		String res = p.getFirst() + " " + p.getSecond() + " "; // On concatène notre couple dans une variable
+	    words -= 2; // On décrémente de 2 notre variable words
+	    while (words-- > 0) { // Tant que words - 1 est supérieur à 0
+	      List<String> l = this.couples.get(p); // On attribut une liste venant de notre hashmap si on trouve notre couple passé en paramètre dans cette dennière
+	      if (l == null) { // Si l'on ne trouve pas ce couple la liste est null et on sort de notre fonction
 	    	  break;
 	      }
-	      String s = randomElement(l);
-	      res += s + " ";
-	      p = new Couple(p.getSecond(), s);
+	      String s = randomElement(l); // Sinon on prend un élement aléatoire de notre liste et on le stock dans une variable s
+	      res += s + " "; // On ajoute ce mot à notre résultat
+	      p = new Couple(p.getSecond(), s); // On créer un couple avec le second mot de notre couple passé en paramètre et notre mot aléatoire
 	    }
 
-		return res;
+		return res; // On renvoie notre texte généré quand il n'y a plus assez de mot afin de générer un nouveau couple.
 	}
 }
