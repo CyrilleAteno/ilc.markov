@@ -28,12 +28,13 @@ public class Markov {
 			}
 		return null;
 	}
-
+// Cette fonction permet de renovyer un Element aleatoire de la liste envoyee comme param
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+        /* la fonction permet de lire un ficher en passant le chemin*/
 	public void readFile(String path) {
 		Scanner sc;
 		try {
@@ -66,7 +67,11 @@ public class Markov {
 		}
 
 	}
-
+/*
+        Cette fonction permet de generer du texte en prenant un obj
+        Couple et le nombre de mots a envoyer dans le texte.
+        
+        */
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
