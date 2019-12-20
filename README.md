@@ -15,7 +15,7 @@ TP NOTE 4A ILC 2019
 ## Functions to be tested
 Hereafter, for each classes give function to be tested 
 
-### Classe Coulpe
+### Classe Couple
 #### functions
 
 ### Classe Markov
