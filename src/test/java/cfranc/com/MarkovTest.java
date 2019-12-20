@@ -49,6 +49,17 @@ public class MarkovTest {
 		int expected=3;
                 int actual=m.couples.size();
 		assertEquals(expected,actual);
+                
+	}
+        @Test
+	public void testGenerateText4mot() {
+		Markov m = new Markov();
+		m.readFile("test4.txt");
+		
+                Couple p = Markov.randomElement(m.couples.keySet());
+		String res = m.generateText(p, 4);
+		assertNotNull(res);
+                System.out.println(res);
 	}
 
 
