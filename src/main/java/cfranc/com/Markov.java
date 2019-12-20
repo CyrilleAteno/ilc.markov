@@ -15,7 +15,8 @@ public class Markov {
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
-
+        
+        //returns a random element from a collection of elements c
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
