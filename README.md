@@ -14,19 +14,15 @@ TP NOTE 4A ILC 2019
 
 ## Functions to be tested
 Hereafter, for each classes give function to be tested
-Couple : 
-    (- equals)
-    - hashCodeEclipse
-Maven : 
-    - randElement
-    - readFile
-    - generateText
 
 ### Classe Coulpe
-#### functions
+#### hashCodeEclipse
+#### (equals)
 
 ### Classe Markov
-#### function
+#### randElement
+#### readFile
+#### generateText
 
 ## Tricks & tips
 
