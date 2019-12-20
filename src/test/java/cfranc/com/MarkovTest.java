@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class MarkovTest {
 
-	/*@Test
+	/*@Test //Ne fonctionne pas à cause de l'encodage
 	public void test() throws FileNotFoundException {
 		Markov m = new Markov();
 		m.readFile("cosette1.txt");
