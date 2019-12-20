@@ -17,9 +17,18 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+init()
+Couple()
+test des getter et setter
+hashCodeEclipse() 
+pas hashCode() car c'est juste un return du test de hashCodeEclipse()
+equals(Object obj) car c'est une réécritur ed'un fction existante
 
 ### Classe Markov
 #### function
+randomElement(Collection<E> c) pas de test car la fct n'est pas utilisée
+readFile(String path) pas de test sur le scanner car fct inié a java
+generateText(Couple p, int words)
 
 ## Tricks & tips
 
