@@ -17,21 +17,25 @@ public class Markov {
 	}
 
 	@SuppressWarnings("unused")
+	// Selectionne une variable aléatoirement dans une collection de Type E à définir
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
 		for (E x : c)
 			if (n-- == 0) {
 				return x;
-
 			}
 		return null;
 	}
 
+	// Selectionne une chaine de caractere aléatoirement
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+	/* lit un fichier
+	* @path définit le fichier source en utilisant l'exception de fichier non trouvé
+	* */
 	public void readFile(String path) throws FileNotFoundException{
 		Scanner sc;
 		sc = new Scanner(new File(path));
@@ -43,36 +47,40 @@ public class Markov {
 			w1 = sc.next();
 			if (sc.hasNext()) {
 				w2 = sc.next();
-				prev = new Couple(w1, w2);
+				prev = new Couple(w1, w2);  //Si il y a deux mots, on les enregistres dans un couple
 				while (sc.hasNext()) {
-					String w3 = sc.next();
-					List<String> l = this.couples.get(prev);
-					if(l == null) {
-						l = new ArrayList<String>();
-						this.couples.put(prev, l);
+					String w3 = sc.next(); //On enregistre le mot suivant dans w3
+					List<String> l = this.couples.get(prev); //On enregistre w3 dans la liste l
+					if(l == null) {	// si l n'existe pas
+						l = new ArrayList<String>();   // on créer l
+						this.couples.put(prev, l);     //on créer l'association entre le couple et la liste
 					}
-					l.add(w3);
-					Couple e = new Couple(prev.getSecond(), w3);
-					prev = e;
+					l.add(w3);   // on ajoute w3 à la liste
+					Couple e = new Couple(prev.getSecond(), w3);  //on créer un nouveau couple avec w2 et w3
+					prev = e;	//on remplace prev
 				}
 			}
 		}
-		sc.close();
+		sc.close(); // on ferme le fichier
 	}
 
+
+	/*
+	* Génère du texte à partir d'un couple d'une taille words
+	*/
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
-	    while (words-- > 0) {
-	      List<String> l = this.couples.get(p);
-	      if (l == null) {
+	    while (words-- > 0) {				//on décrémente 0 et tant que words >0
+	      List<String> l = this.couples.get(p);		//on récupere un élément P
+	      if (l == null) {					// Si la liste est vide on arrete
 	    	  break;
 	      }
-	      String s = randomElement(l);
-	      res += s + " ";
-	      p = new Couple(p.getSecond(), s);
+	      String s = randomElement(l);      // Sinon on récupère un élément
+	      res += s + " ";					// On l'ajoute suivis d'un espace
+	      p = new Couple(p.getSecond(), s); // on créer un couple avec le 2eme élément du couple et le mot suivant
 	    }
 
-		return res;
+		return res;							// Renvoie la liste de mots
 	}
 }
