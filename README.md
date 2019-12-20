@@ -17,9 +17,13 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+##### Fonction boolean equals(Object obj){}
+Vérifier si 
 
 ### Classe Markov
 #### function
+##### void readFile(String path) {}
+Vérifier si
 
 ## Tricks & tips
 

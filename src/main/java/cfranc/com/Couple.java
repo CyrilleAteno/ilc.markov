@@ -1,6 +1,6 @@
 package cfranc.com;
 
-//CrÃ©ation d'un codage unique
+//Création d'un codage unique permettant de sélectionner le point de départ totalement aléatoiremment sans respecté l'ordre alphabétique
 public class Couple {
 	
 	private String first;
@@ -30,12 +30,12 @@ public class Couple {
 	@Override
 	public int hashCode() {
 		//return hashCodeEclipse();
-		return this.first.hashCode() + this.second.hashCode(); //l'addition de 2 codages diffÃ©rents = un codage unique
+		return this.first.hashCode() + this.second.hashCode(); //l'addition de 2 codages différents = un codage unique
 	}
 
-        //DÃ©termine le codage des entrÃ©es pour avoir un hashage uniforme numÃ©rique et non pas alphanumÃ©rique (ne dÃ©pend pas des lettres)
+        //Détermine le codage des entrées pour avoir un hashage uniforme numérique et non pas alphanumérique (ne dépend pas des lettres)
 	int hashCodeEclipse() {
-		final int prime = 31;   //nb alÃ©atoire
+		final int prime = 31;   //nb aléatoire
 		int result = 1;
 		result = prime * result + ((first == null) ? 0 : first.hashCode());
 		result = prime * result + ((second == null) ? 0 : second.hashCode());

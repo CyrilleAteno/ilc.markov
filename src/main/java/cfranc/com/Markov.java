@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Vector;
 
-
+//Lecture d'un texte et utilisation de Couple.java pour le choix du début de l'extrait copié (indication du nombre de mots à extraire par l'user)
 public class Markov {
 
 	HashMap<Couple, List<String>> couples;
@@ -28,26 +28,29 @@ public class Markov {
 			}
 		return null;
 	}
-
+        
+// Choix aléatoire dans la liste de mot 
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
 
+        //(choix d'un mot dans un texte)
 	public void readFile(String path) {
 		Scanner sc;
 		try {
-			sc = new Scanner(new File(path));
+			sc = new Scanner(new File(path));   //sélection du fichier texte
 
 			String w1 = null;
 			String w2 = null;
 			Couple prev = new Couple(w1, w2);
-			if (sc.hasNext()) {
+                        //Sélection de 2 mots dans le texte si il y en a
+			if (sc.hasNext()) {     
 				w1 = sc.next();
 				if (sc.hasNext()) {
 					w2 = sc.next();
 					prev = new Couple(w1, w2);
-					while (sc.hasNext()) {
+					while (sc.hasNext()) {      //tant qu'il y a du texte non-traité
 						String w3 = sc.next();
 						List<String> l = this.couples.get(prev);
 						if(l == null) {
@@ -67,6 +70,7 @@ public class Markov {
 
 	}
 
+        //Extrait le nombre de mots indiqués par l'user
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
