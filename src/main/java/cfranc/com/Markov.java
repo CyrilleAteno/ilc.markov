@@ -36,7 +36,7 @@ public class Markov {
     }
     
     /**
-     * Permet d'obtenir un élément aléatoire de la liste
+     * Permet d'obtenir un élément aléatoire de la liste de String
      * @param v
      * @return
      */
