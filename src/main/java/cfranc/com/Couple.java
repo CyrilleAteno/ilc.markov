@@ -1,5 +1,6 @@
 package cfranc.com;
-
+// la classe cree un couple avec deux attributs et des getters et setters avec hashcode() aui renvoit la somme des hashcodes et equals qui verifie
+//si les couples sont egaux
 public class Couple {
 	
 	private String first;
@@ -10,7 +11,7 @@ public class Couple {
 		this.second = w2;
 	}
 	
-	public String getFirst() {
+	public String getFirst() {      //getter et setters
 		return first;
 	}
 
@@ -31,11 +32,11 @@ public class Couple {
 		//return hashCodeEclipse();
 		return this.first.hashCode() + this.second.hashCode();
 	}
-
+        
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((first == null) ? 0 : first.hashCode());
+		result = prime * result + ((first == null) ? 0 : first.hashCode()); // si first est nul;ca donne 0; sinon ca donne hashcode du first
 		result = prime * result + ((second == null) ? 0 : second.hashCode());
 		return result;
 	}
