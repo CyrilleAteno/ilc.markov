@@ -1,6 +1,7 @@
 package cfranc.com;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -20,6 +21,19 @@ public class MarkovTest {
 	@Test(expected = NullPointerException.class)
 	public void should_return_exception_when_p_isNull() {
 		m.generateText(null, 10);
+	}
+
+	@Test
+	public void should_null_when_text1() {
+		m.readFile("test1.txt");
+		assertTrue(m.couples.size() == 0);
+
+	}
+
+	@Test
+	public void should_null_when_text2() {
+		m.readFile("test2.txt");
+		assertTrue(m.couples.size() == 0);
 	}
 
 	@Test
