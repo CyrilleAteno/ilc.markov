@@ -30,6 +30,11 @@ public class CoulpeTest {
             assertEquals(false, res);
         }
         
-        
+        @Test
+        public void memeType(){
+            
+            boolean res = cp.equals(cp1);
+            assertEquals(false, true);
+        }
 
 }
