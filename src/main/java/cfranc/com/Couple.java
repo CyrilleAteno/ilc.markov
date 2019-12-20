@@ -49,29 +49,30 @@ public class Couple {
 	}
         
         /*
-        GÃ©nerer le hashCode de la classe Ã  partir des hashCode de ses attributs
+        Génerer le hashCode de la classe à partir des hashCode de ses attributs
         Chaque instance de la classe dispose ainsi d'un code unique        
         */
         
 	@Override
 	public int hashCode() {
-		//return hashCodeEclipse();
-		return this.first.hashCode() + this.second.hashCode();
+		return hashCodeEclipse();
+		//return this.first.hashCode() + this.second.hashCode(); Probleme sur ce retour
+                
 	}
         
         /*
-            GÃ©nerer le code numÃ©rique de la classe Ã  partir d'un calcul dÃ©fini
+            Génerer le code numérique de la classe à partir d'un calcul défini
             
         */
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((first == null) ? 0 : first.hashCode()); //OÃ©ration ternaire si first est nulle rÃ©cupere 0 sinon rÃ©cupere le hashCode de first
+		result = prime * result + ((first == null) ? 0 : first.hashCode()); //Oération ternaire si first est nulle récupere 0 sinon récupere le hashCode de first
 		result = prime * result + ((second == null) ? 0 : second.hashCode());// idem
 		return result;
 	}
 	
-        // MÃ©thode de comparaison rÃ©Ã©crite.(override)
+        // Méthode de comparaison réécrite.(override)
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
