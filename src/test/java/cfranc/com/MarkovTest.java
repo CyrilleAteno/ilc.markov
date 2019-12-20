@@ -30,25 +30,25 @@ public class MarkovTest {
         
         //Test readFile with test1.txt. Hashmap should be null
         @Test
-        public void readFile_1Word_Null(){
+        public void readFile_test1_Null(){
             Markov m = new Markov();
             m.readFile("test1.txt");
             
-            assertEquals(null,m.couples.size());
+            assertEquals(0,m.couples.size());
         }
         
-        //Test readFile with test2.txt
+        //Test readFile with test2.txt Hashmap's length should be 1
         @Test
-        public void readFile_2Words_0(){
+        public void readFile_test2_0(){
             Markov m = new Markov();
             m.readFile("test2.txt");
             
-            assertEquals(0, m.couples.size());
+            assertEquals(1, m.couples.size());
         }
         
         //Test readFile with test3.txt
         @Test
-        public void readFile_3Words_2Couples(){
+        public void readFile_test3_2Couples(){
             Markov m = new Markov();
             m.readFile("test3.txt");
             
@@ -57,7 +57,7 @@ public class MarkovTest {
         
         //Test readFile with test4.txt
         @Test
-        public void readFile_4Words_3Couples(){
+        public void readFile_test4_3Couples(){
             Markov m = new Markov();
             m.readFile("test4.txt");
             
@@ -65,7 +65,14 @@ public class MarkovTest {
         }
         
         @Test
-        public void generateText_(){
+        public void generateText_1Couple(){
             Markov m = new Markov();
+            m.readFile("cosette.txt");
+            
+            Couple c = new Couple("Java", "Tests");
+            String res = m.generateText(c, 2);
+            
+            
+            
         }
 }
