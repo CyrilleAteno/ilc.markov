@@ -2,9 +2,9 @@
 TP NOTE 4A ILC 2019
 
 ## Questions
-- Fork this github repository
-- Run the project
-- Comment the 2 classes
+v- Fork this github repository
+v- Run the project
+v- Comment the 2 classes
 - Complete the next section : functions to be tested
 - Commit your changes (commit README.md)
 - Make tests (call your test functions using the rule: GIVEN_WHEN_THEN) 
@@ -15,11 +15,13 @@ TP NOTE 4A ILC 2019
 ## Functions to be tested
 Hereafter, for each classes give function to be tested 
 
-### Classe Coulpe
+### Classe Couple
 #### functions
+public boolean equals(Object obj)
 
 ### Classe Markov
 #### function
+private String randomElement(List<String> v)
 
 ## Tricks & tips
 
