@@ -12,10 +12,12 @@ public class Markov {
 
 	HashMap<Couple, List<String>> couples;
 
+        //Constructeur
 	public Markov() {
 		this.couples = new HashMap<Couple, List<String>>();
 	}
 
+        //Permet de choisir un élément au hasard dans la collection passée en paramètre
 	@SuppressWarnings("unused")
 	static <E> E randomElement(Collection<E> c) {
 		int n = (int) (Math.random() * c.size());
@@ -27,11 +29,13 @@ public class Markov {
 		return null;
 	}
 
+        //Choisis un mot au hasard parmi la liste en paramètre
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
-
+        
+        //Permet de générer des couples à partir d'un fichier
 	public void readFile(String path) throws FileNotFoundException{
 		Scanner sc;
 		sc = new Scanner(new File(path));
@@ -39,15 +43,20 @@ public class Markov {
 		String w1 = null;
 		String w2 = null;
 		Couple prev = new Couple(w1, w2);
-		if (sc.hasNext()) {
+		//Si le fichier n'est pas vide
+                if (sc.hasNext()) {
 			w1 = sc.next();
+                        //Si le fichier a plus d'un mot
 			if (sc.hasNext()) {
 				w2 = sc.next();
 				prev = new Couple(w1, w2);
-				while (sc.hasNext()) {
+				//Tant qu'il y a au moins un mot pas encore lu
+                                while (sc.hasNext()) {
 					String w3 = sc.next();
-					List<String> l = this.couples.get(prev);
-					if(l == null) {
+					//Liste des couples
+                                        List<String> l = this.couples.get(prev);
+					//Cette liste est vide au début donc on l'initialise
+                                        if(l == null) {
 						l = new ArrayList<String>();
 						this.couples.put(prev, l);
 					}
@@ -60,8 +69,9 @@ public class Markov {
 		sc.close();
 	}
 
+        //Permet de générer un nombre words de mots à partir d'un couple
 	public String generateText(Couple p, int words) {
-		String res = p.getFirst() + " " + p.getSecond() + " ";
+            String res = p.getFirst() + " " + p.getSecond() + " ";
 	    words -= 2;
 	    while (words-- > 0) {
 	      List<String> l = this.couples.get(p);

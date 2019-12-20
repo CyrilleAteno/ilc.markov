@@ -15,11 +15,16 @@ TP NOTE 4A ILC 2019
 ## Functions to be tested
 Hereafter, for each classes give function to be tested 
 
-### Classe Coulpe
+### Classe Couple
 #### functions
+Equals
+HashCodeEclipse
 
 ### Classe Markov
 #### function
+randomElement
+readFile
+generateText
 
 ## Tricks & tips
 
