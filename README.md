@@ -18,6 +18,7 @@ Hereafter, for each classes give function to be tested
 ### Classe Coulpe
 #### functions
  - hashCodeEclipse() : on teste si la valeur de hash est equal ou non a 31
+- equals(...) : on teste si obj passant est null/ de meme type/
 
 ### Classe Markov
 #### function 
