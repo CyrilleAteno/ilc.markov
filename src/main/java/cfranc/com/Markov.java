@@ -32,7 +32,7 @@ public class Markov {
 		return null;
 	}
 
-        //Permet de retourner un élement aléatoire contenu dans la liste
+        //Permet de retourner un mot aléatoire contenu dans la liste
         //v : une liste de chaine de caractère
         //retourn une chaine de caractère
 	private String randomElement(List<String> v) {
