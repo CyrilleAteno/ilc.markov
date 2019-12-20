@@ -32,4 +32,8 @@ public class MarkovTest {
             test.readFile("4.txt");
             assertNotEquals(0, test.couples.size());
         }
+        
+        @Test
+        public void testGenerateText(){
+        }
 }
