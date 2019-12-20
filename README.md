@@ -17,15 +17,15 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Couple
 #### functions
-Equals
-HashCodeEclipse
+- Equals
+- HashCodeEclipse
 
 ### Classe Markov
 #### function
-randomElement(List<String> v)
-(On ne teste pas l'autre fonction randomElement car on ne l'utilise pas)
-readFile
-generateText
+- randomElement(List<String> v)
+- (On ne teste pas l'autre fonction randomElement car on ne l'utilise pas)
+- readFile
+- generateText
 
 ## Tricks & tips
 
