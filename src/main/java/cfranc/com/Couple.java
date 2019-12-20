@@ -2,9 +2,6 @@
  * @Potiquet Clement
  */
 
-/**
- * Utilite de la classe :
- */
 package cfranc.com;
 
 public class Couple {
@@ -12,7 +9,7 @@ public class Couple {
 	private String first;
 	private String second;
 	
-        //Constructeur avec paramÃ¨tre de la classe
+        //Constructeur avec paramètre de la classe
 	public Couple(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
