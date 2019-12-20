@@ -7,9 +7,15 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Vector;
 
-
+/**
+ * 
+ * Class Markov qui fait l'encodage de markov en lui donnant un point d'entré
+ * dans notre collection et le nombre de mot que l'on souhaite
+ * 
+ * @author cyrille
+ *
+ */
 public class Markov {
 
 	HashMap<Couple, List<String>> couples;
@@ -29,10 +35,26 @@ public class Markov {
 		return null;
 	}
 
+	/**
+	 * Fonction randomElement qui prend en paramètre un list de String et qui nous
+	 * retourne un élément au hasard permet de chercher un debut de phrase
+	 * 
+	 * @param v
+	 * @return
+	 */
 	private String randomElement(List<String> v) {
 		int n = (int) (Math.random() * v.size());
 		return v.get(n);
 	}
+
+	/**
+	 * fonction readFile qui prend en paramètre un nom de fichier (son chemin) puis
+	 * le lit ligne par ligne en prenant soins de mettre chaque couple de mot dans
+	 * un object prev de type couple et s'il y'a plus de deux mots, ajoutent les
+	 * autres dans une object de type List avant de l'ajouter dans l'HashMap couples
+	 * 
+	 * @param path
+	 */
 
 	public void readFile(String path) {
 		Scanner sc;
@@ -50,7 +72,7 @@ public class Markov {
 					while (sc.hasNext()) {
 						String w3 = sc.next();
 						List<String> l = this.couples.get(prev);
-						if(l == null) {
+						if (l == null) {
 							l = new ArrayList<String>();
 							this.couples.put(prev, l);
 						}
@@ -67,21 +89,29 @@ public class Markov {
 
 	}
 
+	/**
+	 * Fonction qui genere un texte (un nombre de mot => word) à partir d'un objet
+	 * Couple
+	 * 
+	 * @param p
+	 * @param words
+	 * @return texte générer
+	 */
+
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
-	    words -= 2;
-	    while (words-- > 0) {
-	      List<String> l = this.couples.get(p);
-	      if (l == null) {
-	    	  break;
-	      }
-	      String s = randomElement(l);
-	      res += s + " ";
-	      p = new Couple(p.getSecond(), s);
-	    }
+		words -= 2;
+		while (words-- > 0) {
+			List<String> l = this.couples.get(p);
+			if (l == null) {
+				break;
+			}
+			String s = randomElement(l);
+			res += s + " ";
+			p = new Couple(p.getSecond(), s);
+		}
 
 		return res;
 	}
-
 
 }
