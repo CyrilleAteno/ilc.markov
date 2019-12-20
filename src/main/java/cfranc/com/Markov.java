@@ -78,16 +78,16 @@ public class Markov {
 	 */
 	public String generateText(Couple p, int words) {
 		String res = p.getFirst() + " " + p.getSecond() + " ";
-	    words -= 2;
-	    while (words-- > 0) { //Tant qu'il reste des mots à ajouter
-	      List<String> l = this.couples.get(p);	//On récupère les mots qui ont été trouvés après ce couple dans le texte d'entraînement
-	      if (l == null) {	//S'il n'y a pas de mot, on s'arrête puisque l'on ne peut plus continuer le texte.
-	    	  break;
-	      }
-	      String s = randomElement(l);	//On récupère un mot aléatoirement parmi ceux qui peuvent suivre le dernier couple de mot placé
-	      res += s + " "; //On ajoute ce mot au texte
-	      p = new Couple(p.getSecond(), s); //On met à jour le dernier couple placé dans le texte
-	    }
+		words -= 2;
+		while (words-- > 0) { //Tant qu'il reste des mots à ajouter
+			List<String> l = this.couples.get(p);	//On récupère les mots qui ont été trouvés après ce couple dans le texte d'entraînement
+			if (l == null) {	//S'il n'y a pas de mot, on s'arrête puisque l'on ne peut plus continuer le texte.
+				break;
+			}
+			String s = randomElement(l);	//On récupère un mot aléatoirement parmi ceux qui peuvent suivre le dernier couple de mot placé
+			res += s + " "; //On ajoute ce mot au texte
+			p = new Couple(p.getSecond(), s); //On met à jour le dernier couple placé dans le texte
+		}
 
 		return res;
 	}
