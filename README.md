@@ -17,10 +17,15 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+- equals
+Je ne sais pas comment tester hashcodeEclipse car la valeur que ça retourne ne peut
+pas être prédite 
 
 ### Classe Markov
 #### function
-
+- randomElement (les fonctions d'objet et de classe)
+- readFile
+- generateText
 ## Tricks & tips
 
 - Never test auto generate code
