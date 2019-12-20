@@ -5,10 +5,12 @@ public class Couple {
 	private String first;
 	private String second;
 	
+        
 	public Couple(String w1, String w2) {
 		init(w1, w2);
 	}
-
+        
+        //Initializes Couple attributes w1 and w2
 	public void init(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
@@ -29,12 +31,15 @@ public class Couple {
 	public void setSecond(String second) {
 		this.second = second;
 	}
-
+        
+        // override of the method hashCode with the method hashCodeEclispe
 	@Override
 	public int hashCode() {
 		return hashCodeEclipse();
 	}
-
+        
+        //Method that returns a hash (signed 32 bits int) of the instance's attribute
+        //exemple : if first is null, prime * result + second.hashCode() is stored in result.
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
@@ -43,6 +48,7 @@ public class Couple {
 		return result;
 	}
 	
+        //Method that compares two objects, if the instance equals obj returns true
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
