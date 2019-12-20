@@ -4,7 +4,8 @@ public class Couple {
 	
 	private String first;
 	private String second;
-	
+
+	//le constructeur de la fonction qui initialise les deux attributs du nouveau objet
 	public Couple(String w1, String w2) {
 		this.first = w1;
 		this.second = w2;
@@ -26,12 +27,16 @@ public class Couple {
 		this.second = second;
 	}
 
+
+	//fonction qui va nous permetre de melanger l'ordre des objet sous forme uniforme
 	@Override
 	public int hashCode() {
 		//return hashCodeEclipse();
 		return this.first.hashCode() + this.second.hashCode();
 	}
 
+	//La méthode hashCodeEclipse () générée commence par une déclaration d'un nombre premier (31),
+	// effectue diverses opérations sur les objets primitifs et renvoie son résultat en fonction des attributs de l'objet.
 	int hashCodeEclipse() {
 		final int prime = 31;
 		int result = 1;
@@ -39,7 +44,10 @@ public class Couple {
 		result = prime * result + ((second == null) ? 0 : second.hashCode());
 		return result;
 	}
-	
+
+	//equals () vérifie d'abord si deux objets sont la même instance (==) et renvoie true s'ils le sont.
+	//Ensuite, il vérifie que l'objet de comparaison n'est pas nul et que les deux objets sont de la même classe, renvoyant false s'ils ne le sont pas.
+	//Enfin, equals () convertie l'objet d'entré en Objet COUPLE, puis vérifie l'égalité de chaque variable membre du Couple crée et l'objet, renvoyant false si l'une d'entre elles n'est pas égale.
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

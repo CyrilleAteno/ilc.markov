@@ -17,9 +17,13 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Coulpe
 #### functions
+- hashCodeEclipse
 
 ### Classe Markov
 #### function
+- randomElement
+- readFile
+- generateText
 
 ## Tricks & tips
 
