@@ -39,7 +39,10 @@ public class Markov {
 	}
 
         /*Lecture d'un fichier donné en paramètre pour remplir la HashMap de
-        l'instance*/
+        l'instance. S'il y a un mot, on le stocke dans w1. S'il y a deux mots,
+        on stocke aussi le deuxième mot dans w2. S'il y a plus de 
+        deux mots, on regarde les mots suivants. S'ils ne sont pas nuls, on 
+        rentre dans la hashMap ces mots*/
 	public void readFile(String path) throws FileNotFoundException{
 		Scanner sc;
 		sc = new Scanner(new File(path));
